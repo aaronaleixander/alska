@@ -9,7 +9,6 @@
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
 
-
 //Require the autoload file
 require_once('vendor/autoload.php');
 
@@ -21,6 +20,18 @@ $f3->set('DEBUG', 3);
 $f3->route('GET /', function () {
     $view = new Template();
     echo $view->render('views/home.html');
+});
+
+// PLAY
+$f3->route('GET|POST /play', function () {
+    $view = new Template();
+    echo $view->render('views/play.html');
+});
+
+// TOP SCORES
+$f3->route('GET|POST /scores', function () {
+    $view = new Template();
+    echo $view->render('views/scores.html');
 });
 
 // Run fat-free
