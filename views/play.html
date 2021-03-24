@@ -7,17 +7,46 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/styles.css">
     <title>Playing Greed Kata</title>
 </head>
 <body>
-    <div class="container">
+    <div class="container text-center">
         <div>
-            <h3>Hello, {name}</h3>
+            <h3>Hello, {{@SESSION.player}}! wanna play?</h3>
         </div>
         <hr>
-        <button type="button" class="btn btn-outline-primary" onclick="playGame()" >Roll Dice</button>
+        <button type="button" class="btn btn-outline-primary" onclick="playGame()" id="playButton">Roll Dice</button>
+        <div>
+            <p id="dice-roll"></p>
+        </div>
+        <div>
+            <p id="score"></p>
+        </div>
+
+        <div>
+            <button type="button" class="btn btn-outline-primary" onclick="playGame()" id="playAgainButton">Play Again</button>
+            <button type="button" class="btn btn-outline-primary" onclick="window.location.href='{{@BASE}}';" id="homeButton">Return Home</button>
+        </div>
+    </div>
+    <br>
+    <div class="text-center">
+        <p>
+            <strong> Rules: </strong>  <br>
+            You get <strong>one</strong> roll <br>
+            Single One: 100 points <br>
+            Single Five: 50 points <br>
+            Triple Ones: 1000 points <br>
+            Triple Twos: 200 points <br>
+            Triple Threes: 300 points <br>
+            Triple Fours: 400 points <br>
+            Triple Fives: 500 points <br>
+            Triple Sixes: 600 points
+        </p>
     </div>
 
+
 </body>
+<script src="//code.jquery.com/jquery.js"></script>
 <script type="text/javascript" src="scripts/main.js"></script>
 </html>

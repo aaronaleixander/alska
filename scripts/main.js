@@ -1,13 +1,22 @@
 /**
+ * This j-query will help with button visibility while playing greed kata
+ * */
+$("#playButton").on("click", function(){
+   $("#playButton").hide();
+    $("#playAgainButton").show();
+    $("#homeButton").show();
+});
+
+/**
  * This function will initialize an instance of the main core functionality of Greed Kata
  * */
 function playGame(){
     let currentRoll = rollFiveDice();
     console.log(currentRoll.toString());
-
-
     console.log(calculateScore(currentRoll));
 
+    document.getElementById("dice-roll").innerHTML = "You rolled: " + currentRoll.toString(); // Output Roll
+    document.getElementById("score").innerHTML = "You scored: " + calculateScore(currentRoll); // Output Score
 }
 
 /**
