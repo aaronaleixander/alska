@@ -1,6 +1,8 @@
 # Greed Kata - The Single Roll - Dice Game
 I originally knew that I wanted to implement this exercise into a playabe web application but first wanted to get the core game logic implented using java so I can test and use the debugger if necesary.
 
+PLAY GREED KATA HERE : https://autterback.greenriverdev.com/328/alska/
+
 The steps I wanted to take was:
 1) Generate an array of 5 random numbers 1 - 6 that represents a roll of the dice.
 2) Store the array of random integers into a map structure, with the kay being the element rolled and value incrementing for repeated elements in the array. This functionality was a success with Java but did not work out for me when converting to JavaScript. The login is however commented out. I took a defferent route in the JavaScript to calculate score.
