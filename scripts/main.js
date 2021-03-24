@@ -79,13 +79,13 @@ function calculateScore(diceArray){
         } else if(i === 4 && scoreArray[i] !== 0){ //Fives
             let value = scoreArray[i];
             totalScore += (50 * value);
-        } else if(i === 1 && scoreArray[i] === 3){ // Three Twos
+        } else if(i === 1 && scoreArray[i] >= 3){ // Three Twos
             totalScore += 200;
-        } else if(i === 2 && scoreArray[i] === 3){ // Three Threes
+        } else if(i === 2 && scoreArray[i] >= 3){ // Three Threes
             totalScore += 300;
-        } else if(i === 3 && scoreArray[i] === 3){ // Three Fours
+        } else if(i === 3 && scoreArray[i] >= 3){ // Three Fours
             totalScore += 400;
-        } else if(i === 5 && scoreArray[i] === 3){ // Three Sixes
+        } else if(i === 5 && scoreArray[i] >= 3){ // Three Sixes
             totalScore += 600;
         }
     }

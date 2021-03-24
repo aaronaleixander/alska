@@ -42,7 +42,7 @@ $f3->route('GET|POST /play', function () {
     echo $view->render('views/play.html');
 });
 
-// TOP SCORES
+// TOP SCORES - not implemented
 $f3->route('GET|POST /scores', function () {
     $view = new Template();
     echo $view->render('views/scores.html');
